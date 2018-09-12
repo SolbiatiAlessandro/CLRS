@@ -3,4 +3,14 @@ This is a repo with implementation of algorithm in pseudocode from CLRS in C/C++
 
 Contents:
 
-* [I] are implementations, [E] are exercises
+Chapter2
+readme.md
+
+./Chapter2:
+<b>binarysearch.py</b>
+<b>optimizedInsertionSort.py</b>
+
+./Chapter2/implementations:
+<b>insertionsort.py</b>
+<b>mergesort.py</b>
+
