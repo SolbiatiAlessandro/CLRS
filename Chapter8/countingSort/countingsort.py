@@ -1,7 +1,10 @@
 def countingSort(array):
     """
-    this is a O(n) implementation
+    this is a O(n+k) implementation
     of counting sort as from CLRS pg. 169
+    where n = len(array) 
+          k = max(array) - min(array)
+    efficient when k=O(n) so that O(k+n)->O(n)
     """
     small, big = int(1e9), int(-1e9)
     for e in array:
@@ -15,5 +18,3 @@ def countingSort(array):
         res[helper[e-small] - 1] = e
         helper[e-small]-=1
     return res
-
-
