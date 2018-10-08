@@ -2,6 +2,7 @@ import unittest
 from binary_search_tree import Node
 from traverse import in_order_traversal, in_order_traversal_iterative, pre_order_traversal, post_order_traversal
 from query import iterative_tree_search, iterative_minimum, iterative_maximum, iterative_successor, iterative_predecessor
+from insert import tree_insert
 
 
 class testBST(unittest.TestCase):
@@ -81,6 +82,19 @@ class testBST(unittest.TestCase):
             expected = elems[i-1]
             self.assertEqual(expected, got)
         self.assertEqual(iterative_predecessor(self.tree, 2), None)
+
+    def test_insert(self):
+        """Testing functions:
+        -tree_insert
+        """
+        got = tree_insert(self.tree, 6)
+        self.assertEqual(got.right.left.val, 6)
+
+        got = tree_insert(self.tree, 1)
+        self.assertEqual(got.left.left.left.val, 1)
+
+        got = tree_insert(None, 9)
+        self.assertEqual(got.val, 9)
 
 
 if __name__ == "__main__":
