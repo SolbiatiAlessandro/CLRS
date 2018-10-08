@@ -38,6 +38,7 @@ def BFS(G, s):
                 queue.insert(0, adjVertex)
         G.color[vertex] = "black"
 
+
 def printPath(G, v):
     """
     iterative function to print the path from s to v
@@ -47,6 +48,3 @@ def printPath(G, v):
     while G.prev[curr] is not None:
         print G.prev[curr]
         curr = G.prev[curr]
-
-
-
